@@ -1,6 +1,9 @@
 ### MacOS
 .DS_Store
 
+### IDE File
+.idea/
+
 ### Others
 *.icloud
 .icloud
