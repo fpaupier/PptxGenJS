@@ -641,7 +641,7 @@ function slideObjectToXml (slide: PresSlide | SlideLayout): string {
 					strSlideXml += `  <a:videoFile r:link="rId${slideItemObj.mediaRid}"/>`
 					strSlideXml += ' </p:nvPr>'
 					strSlideXml += ' </p:nvPicPr>'
-					// NOTE: `blip` is diferent than videos; also there's no preview "p:extLst" above but exists in videos
+					// NOTE: `blip` is different than videos; also there's no preview "p:extLst" above but exists in videos
 					strSlideXml += ` <p:blipFill><a:blip r:embed="rId${slideItemObj.mediaRid + 1}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill>` // NOTE: Preview image is required!
 					strSlideXml += ' <p:spPr>'
 					strSlideXml += `  <a:xfrm${locationAttr}><a:off x="${x}" y="${y}"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm>`
@@ -651,7 +651,7 @@ function slideObjectToXml (slide: PresSlide | SlideLayout): string {
 				} else {
 					strSlideXml += '<p:pic>'
 					strSlideXml += ' <p:nvPicPr>'
-					// IMPORTANT: <p:cNvPr id="" value is critical - if not the same number as preiew image rId, PowerPoint throws error!
+					// IMPORTANT: <p:cNvPr id="" value is critical - if not the same number as preview image rId, PowerPoint throws error!
 					strSlideXml += `<p:cNvPr id="${slideItemObj.mediaRid + 2}" name="${slideItemObj.options.objectName
 					}"><a:hlinkClick r:id="" action="ppaction://media"/></p:cNvPr>`
 					strSlideXml += ' <p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr>'
@@ -1514,7 +1514,7 @@ export function makeXmlCore (title: string, subject: string, author: string, rev
 
 /**
  * Creates `ppt/_rels/presentation.xml.rels`
- * @param {PresSlide[]} slides - Presenation Slides
+ * @param {PresSlide[]} slides - Presentation Slides
  * @returns XML
  */
 export function makeXmlPresentationRels (slides: PresSlide[]): string {

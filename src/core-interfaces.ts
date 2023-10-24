@@ -1755,7 +1755,7 @@ export interface SlideMasterProps {
 			options: PlaceholderProps
 			/**
 			 * Text to be shown in placeholder (shown until user focuses textbox or adds text)
-			 * - Leave blank to have powerpoint show default phrase (ex: "Click to add title")
+			 * - Leave blank to have PowerPoint show default phrase (ex: "Click to add title")
 			 */
 			text?: string
 		}
